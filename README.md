@@ -3,11 +3,8 @@ datatable
 
 Kohana datatable jquery plugin implementation compatible with datatable 1.10 and later
 
-    Can join tables , order, sort ,search and etc ..
-    
-    
-    
-    Using Example place youe code in controller / action , where u want response datatable as json
+Can join tables , order, sort ,search and etc
+Using Example place youe code in controller or action , where u want response datatable as json
     				// payments is table name 
 	                $dataTable = DataTable::instance('payments');
 	                // array of columns , field table need for joined columns
@@ -71,8 +68,8 @@ Kohana datatable jquery plugin implementation compatible with datatable 1.10 and
 	                // finally response Json encoded string
 	                $dataTable->sendData($this->request->post());
                 
-	**Js params on page
-	
+HTML Table
+=========	
                         <table id="users_active_table1" class="table table-striped table-hover" width="100%">
                             <thead>
                             <tr>
@@ -95,7 +92,8 @@ Kohana datatable jquery plugin implementation compatible with datatable 1.10 and
                             </tbody>
                         </table>	
                         
-                        
+Js params on page
+=========	                        
                     var table = $('#users_active_table1').dataTable({
 			            serverSide: true,
 			            "deferRender": true,
