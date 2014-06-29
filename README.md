@@ -5,6 +5,10 @@ Kohana datatable jquery plugin implementation compatible with datatable 1.10 and
 
 Can join tables , order, sort ,search and etc
 Using Example place youe code in controller or action , where u want response datatable as json
+
+Kohana controller ->action code
+=========	
+
     				// payments is table name 
 	                $dataTable = DataTable::instance('payments');
 	                // array of columns , field table need for joined columns
