@@ -71,7 +71,7 @@ Kohana datatable jquery plugin implementation compatible with datatable 1.10 and
 	                // finally response Json encoded string
 	                $dataTable->sendData($this->request->post());
                 
-	Js params on page
+	**Js params on page
 	
                         <table id="users_active_table1" class="table table-striped table-hover" width="100%">
                             <thead>
