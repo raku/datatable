@@ -2,7 +2,13 @@
 
 /**
  * Class DataTable
- * 
+  * Compatible with DataTables 1.10.x
+*
+* @author Original Author Robin <contact@robin-d.fr>
+* @link http://www.robin-d.fr/DataTablesPHP/
+* @link https://github.com/RobinDev/DataTablesPHP
+* @since File available since Release 2014.05.01
+* rewrited by andmetoo
  */
 class Kohana_Datatable {
 
