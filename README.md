@@ -6,6 +6,9 @@ Kohana datatable jquery plugin implementation compatible with datatable 1.10 and
 Can join tables , order, sort ,search and etc
 Using Example place youe code in controller or action , where u want response datatable as json
 
+Changes:
+15.07.2014: Now datatables ready for aliases in columns
+
 Kohana controller ->action code
 =========	
 
@@ -31,7 +34,9 @@ Kohana controller ->action code
 	                    array
 	                    (
 	                        'data' => 'title',
-	                        'table'=> 'currencies'
+	                        'table'=> 'currencies',
+	                        'alias'=> 'namedtitle'
+	                        //alias option add to SQL AS 
 	                    ),
 	                    array
 	                    (
@@ -120,7 +125,7 @@ Js params on page
 			                    "data": "profit"
 			                },
 			                {
-			                    "data": "title"
+			                    "data": "namedtitle"
 			                },
 			                {
 			                    "data": "paysystem"
