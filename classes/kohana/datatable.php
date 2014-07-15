@@ -8,7 +8,7 @@
 * @link http://www.robin-d.fr/DataTablesPHP/
 * @link https://github.com/RobinDev/DataTablesPHP
 * @since File available since Release 2014.05.01
-* rewrited by andmetoo
+* @rewrite by andmetoo
  */
 class Kohana_Datatable {
 
@@ -168,7 +168,9 @@ class Kohana_Datatable {
                 // if preg_match('#\.#', $column['data']) explode ('.', $colum['data'])...
                     if(isset($column['data']) && !empty($column['data']))
                     {
-                        $row[ isset($column['data'])?$column['data']:$j ] = $data[$i][$column['data']];
+                        //if alias we need output column with alias name
+                        $columnname = isset($column['alias'])?'alias':'data';
+                        $row[ isset($column[$columnname])?$column[$columnname]:$j ] = $data[$i][$column[$columnname]];
                     }
                     else
                         $row[ $j ] = '';
