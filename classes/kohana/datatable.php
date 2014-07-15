@@ -295,14 +295,21 @@ class Kohana_Datatable {
         $columnSearch = array();
 
         // Global Search
+        $count = 0;
         if ( isset($this->request['search']) && !empty($this->request['search']['value'])) {
+            foreach($this->request['columns'] as $column)
+            {
+                if ( $column['searchable'] == true)
+                {
 
-            for ( $i=0, $ien=count($this->request['columns']) ; $i<$ien ; $i++ ) {
-                $column = $this->columns[$i];
-                if(!empty($column['data']))
-                if (!isset($column['searchable']) || $column['searchable'] === true) {
-                    $globalSearch[] = self::toSQLColumn($column, true).' LIKE '.self::quote($this->request['search']['value'], '%');
+                    if(isset($this->columns[$count]['alias']))
+                    {
+                        $column['data'] = $this->columns[$count]['data'];
+                        $column['table'] = $this->columns[$count]['table'];
+                    }
+                    $globalSearch[] = self::toSQLColumn($column).' LIKE '.self::quote($this->request['search']['value'], '%');
                 }
+                $count++;
             }
         }
 
