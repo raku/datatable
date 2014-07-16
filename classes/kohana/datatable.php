@@ -299,7 +299,7 @@ class Kohana_Datatable {
         if ( isset($this->request['search']) && !empty($this->request['search']['value'])) {
             foreach($this->request['columns'] as $column)
             {
-                if ( $column['searchable'] == true)
+                if ( $column['searchable'] == "true")
                 {
 
                     if(isset($this->columns[$count]['alias']))
