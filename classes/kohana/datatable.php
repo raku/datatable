@@ -35,7 +35,7 @@ class Kohana_Datatable {
      * Array of additional conditions
      * @var array
      */
-    private $conditions;
+    private $conditions = array();
 
     /**
      * Correspond to the column options for DataTables javascript initialization (see the doc : DataTables > Refererences > Column)
