@@ -276,7 +276,7 @@ class Kohana_Datatable {
         $order = '';
         if (isset($this->request['order']) && count($this->request['order'])) {
             $orderBy = array();
-            for ($i=0,$ien=count($this->request['order']);$i<=$ien;$i++) {
+            for ($i=0,$ien=count($this->request['order']);$i<$ien;$i++) {
                 $columnIdx = intval($this->request['order'][$i]['column']);
                 $column = $this->columns[$columnIdx];
 
