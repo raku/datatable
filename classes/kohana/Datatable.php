@@ -18,7 +18,7 @@ class Kohana_Datatable {
     /**
      * @var DataTable
      */
-    private static $instance = null;
+    protected static $instance = null;
     /**
      * $_POST OR GET REQUEST
      * @var array
